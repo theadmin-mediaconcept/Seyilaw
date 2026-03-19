@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="en" data-theme="red"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Admission Guide &mdash; Sheyilaw</title><link rel="icon" type="png" href="seyilaw-logo.png"><link rel="stylesheet" href="style.css"/><style>
+.stpg{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.stpc{background:var(--sur);border:1px solid var(--bdr);padding:40px 36px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.stpc:hover{border-color:var(--grn);transform:translateY(-4px)}
+.stpc::before{content:'';position:absolute;top:0;left:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--grn),transparent);transform:scaleY(0);transform-origin:top;transition:transform .4s}
+.stpc:hover::before{transform:scaleY(1)}
+.spnum{width:44px;height:44px;background:var(--dim);border:1px solid var(--badge-bdr);display:flex;align-items:center;justify-content:center;font-family:Arial;font-size:16px;font-weight:800;color:var(--grn);margin-bottom:20px}
+.sptit{font-family:Arial;font-size:19px;font-weight:700;margin-bottom:12px}
+.spds{font-size:14px;color:var(--mut);line-height:1.7}
+.sptips{margin-top:16px;padding-top:16px;border-top:1px solid var(--bdr)}
+.sptlb{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--grn);margin-bottom:8px}
+.sptips ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.sptips ul li{font-size:13px;color:var(--mut);display:flex;gap:8px}
+.sptips ul li::before{content:'\203A';color:var(--grn);font-size:16px;font-weight:700;flex-shrink:0;margin-top:1px}
+.infg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ic{background:var(--sur2);border:1px solid var(--bdr);padding:36px 28px;transition:border-color .3s}
+.ic:hover{border-color:var(--grn)}
+.icico{font-size:36px;margin-bottom:16px}.ictit{font-family:Arial;font-size:18px;font-weight:700;margin-bottom:12px}
+.icul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.icul li{font-size:13px;color:var(--mut);display:flex;gap:8px;line-height:1.5}
+.icul li::before{content:'\2022';color:var(--grn);font-size:16px;flex-shrink:0;margin-top:1px}
+.itbl{width:100%;border-collapse:collapse}
+.itbl th{background:var(--sur2);padding:14px 20px;font-family:Arial;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--mut);text-align:left;border-bottom:1px solid var(--bdr)}
+.itbl td{padding:16px 20px;border-bottom:1px solid var(--bdr);font-size:14px;color:var(--mut)}
+.itbl tr:hover td{background:var(--sur2);color:var(--txt)}
+.ibdg{display:inline-block;padding:3px 10px;font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+.buni{background:rgba(0,230,118,.12);color:var(--grn)}.bpol{background:rgba(255,214,0,.12);color:var(--gld)}.bcol{background:rgba(150,150,255,.12);color:#aaf}
+.hlp{background:var(--dim);border:1px solid var(--badge-bdr);padding:48px 56px;display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap}
+.hlpt{font-family:Arial;font-size:26px;font-weight:700}.hlps{font-size:14px;color:var(--mut);margin-top:8px}
+@media(max-width:900px){.stpg{grid-template-columns:1fr}.infg{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.infg{grid-template-columns:1fr}.hlp{flex-direction:column}}
+</style></head><body><div class="cursor" id="cur"></div><div class="cring" id="ring"></div>
+
+<!-- MOBILE MENU -->
+<div class="mmenu" id="mm">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="admission.html">Admission</a>
+  <a href="training.html">Computer Training</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="ncta">Get Started</a>
+</div>
+
+<!-- MAIN NAV -->
+<nav id="nb">
+  <a href="index.html" class="nlogo">
+    <img src="seyilaw-logo.png" class="nlogo-img" alt="Sheyilaw Logo"/>
+    <div class="nlogo-text">
+      <div class="nlm">Sheyilaw<span>.</span></div>
+      <div class="nls">Computer Institute</div>
+      <div class="nrn">R.N: 9398846</div>
+    </div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="admission.html">Admission</a></li>
+    <li><a href="training.html">Computer Training</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="theme-toggle" id="themeToggle" title="Switch theme">
+      <div class="tt-btn tt-sun active">&#9728;&#65039;</div>
+      <div class="tt-btn tt-moon">&#127769;</div>
+    </div>
+    <a href="contact.html" class="ncta">Get Started</a>
+  </div>
+  <div class="hbg" id="hbg"><span></span><span></span><span></span></div>
+</nav>
+<div class="ph"><div class="ph-bg"></div><div class="ph-gr"></div>
+  <div class="ph-c"><div class="ph-badge"><span class="bdot"></span>Student Support</div>
+  <h1 class="ph-ttl">Admission <span class="ac">Guide</span></h1>
+  <p class="ph-desc">We simplify Nigeria's admission process for students applying to universities, polytechnics and colleges. Step-by-step &mdash; from JAMB to your acceptance letter.</p>
+  <div class="ph-act"><a href="contact.html" class="btn bg">Get Admission Help</a><a href="services.html" class="btn bo">All Services</a></div></div>
+</div>
+<section class="sec" style="background:var(--bg)">
+  <div class="sintr reveal"><div><div class="slbl">The Process</div><h2 class="sttl">Step-by-Step<br><span class="ac">Admission Journey</span></h2></div><div class="rt">Whether applying for the first time or re-sitting, we walk you through each stage clearly and confidently.</div></div>
+  <div class="stpg">
+    <div class="stpc reveal"><div class="spnum">01</div><div class="sptit">JAMB Registration &amp; UTME</div><div class="spds">The first step is registering with JAMB (Joint Admissions and Matriculation Board). We handle your full registration &mdash; NIN verification, profile creation, biometric capture and exam center selection.</div><div class="sptips"><div class="sptlb">What We Help With</div><ul><li>NIN and JAMB profile creation</li><li>Subject combination guidance</li><li>JAMB mock exam registration</li><li>UTME result checking</li></ul></div></div>
+    <div class="stpc reveal"><div class="spnum">02</div><div class="sptit">Choosing Your Institution &amp; Course</div><div class="spds">After UTME, select your preferred institution and course. We guide you on cut-off marks, course requirements and which schools accept your score to maximize your chances.</div><div class="sptips"><div class="sptlb">What We Help With</div><ul><li>Understanding cut-off marks</li><li>First &amp; second choice institution</li><li>Course eligibility &amp; requirements</li><li>Change of institution/course</li></ul></div></div>
+    <div class="stpc reveal"><div class="spnum">03</div><div class="sptit">Post-UTME &amp; Screening</div><div class="spds">Most institutions conduct their own Post-UTME screening. We help you register, access the school portal, download your exam slip and prepare for the screening exam or interview.</div><div class="sptips"><div class="sptlb">What We Help With</div><ul><li>Post-UTME form registration</li><li>Portal access &amp; navigation</li><li>Exam slip printing</li><li>Screening preparation tips</li></ul></div></div>
+    <div class="stpc reveal"><div class="spnum">04</div><div class="sptit">Checking Admission Status</div><div class="spds">Once results are out, you need to check your JAMB CAPS portal for admission status. We monitor this for you, notify you and guide you on accepting your admission promptly.</div><div class="sptips"><div class="sptlb">What We Help With</div><ul><li>JAMB CAPS portal check</li><li>Institution admission portal</li><li>Admission acceptance steps</li><li>Rejection re-application guide</li></ul></div></div>
+    <div class="stpc reveal"><div class="spnum">05</div><div class="sptit">Acceptance Fee Payment</div><div class="spds">After admission, you will need to pay the acceptance fee on your school&apos;s portal. We process this payment accurately, confirm your receipt and ensure your school record is updated.</div><div class="sptips"><div class="sptlb">What We Help With</div><ul><li>Acceptance fee portal payment</li><li>Payment receipt printing</li><li>Confirming payment status</li><li>School portal profile setup</li></ul></div></div>
+    <div class="stpc reveal"><div class="spnum">06</div><div class="sptit">Clearance &amp; Registration</div><div class="spds">The final stage involves document clearance at your institution. We help you prepare and organize all required documents and guide you through the full registration and matriculation process.</div><div class="sptips"><div class="sptlb">What We Help With</div><ul><li>Document checklist preparation</li><li>O&apos;Level result verification</li><li>Course &amp; unit registration</li><li>Student ID &amp; matriculation</li></ul></div></div>
+  </div>
+</section>
+<section class="sec" style="background:var(--sur)">
+  <div class="sintr reveal"><div><div class="slbl">Be Prepared</div><h2 class="sttl">Documents <span class="ac">You&apos;ll Need</span></h2></div><div class="rt">Having your documents ready in advance avoids delays. We can help you process any missing documents.</div></div>
+  <div class="infg">
+    <div class="ic reveal"><div class="icico">&#x1F194;</div><div class="ictit">Identity Documents</div><ul class="icul"><li>National Identity Number (NIN)</li><li>Birth Certificate</li><li>Valid Passport Photograph</li><li>Local Government Identification</li><li>State of Origin Certificate</li></ul></div>
+    <div class="ic reveal"><div class="icico">&#x1F4DA;</div><div class="ictit">Academic Documents</div><ul class="icul"><li>WAEC / NECO / GCE Result(s)</li><li>JAMB Result Slip</li><li>Post-UTME Result Slip</li><li>Primary School Leaving Certificate</li><li>Junior WAEC (BECE) Certificate</li></ul></div>
+    <div class="ic reveal"><div class="icico">&#x1F4CB;</div><div class="ictit">Institution-Specific</div><ul class="icul"><li>Acceptance Fee Receipt</li><li>Admission Letter (printout)</li><li>Medical Fitness Certificate</li><li>Letter of Indigeneship</li><li>Testimonial from Secondary School</li></ul></div>
+  </div>
+</section>
+<section class="sec" style="background:var(--bg)">
+  <div class="sintr reveal"><div><div class="slbl">Institution Types</div><h2 class="sttl">Where Are You<br><span class="ac">Applying To?</span></h2></div><div class="rt">Different institutions have different requirements. We are experienced with them all.</div></div>
+  <div style="overflow-x:auto" class="reveal">
+    <table class="itbl">
+      <thead><tr><th>Institution Type</th><th>Min. JAMB Score</th><th>Entry Requirement</th><th>Duration</th><th>We Assist</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ibdg buni">University</span> Federal &amp; State</td><td>180+ (varies)</td><td>5 O&apos;Level credits (Math &amp; English)</td><td>4&ndash;6 Years</td><td>&#x2705; Full Support</td></tr>
+        <tr><td><span class="ibdg bpol">Polytechnic</span> Federal &amp; State</td><td>160+ (varies)</td><td>5 O&apos;Level credits</td><td>2&ndash;4 Years (ND/HND)</td><td>&#x2705; Full Support</td></tr>
+        <tr><td><span class="ibdg bcol">College</span> College of Education</td><td>150+ (varies)</td><td>5 O&apos;Level credits (incl. English)</td><td>3 Years (NCE)</td><td>&#x2705; Full Support</td></tr>
+        <tr><td><span class="ibdg buni">University</span> Private Universities</td><td>140+ (varies)</td><td>5 O&apos;Level credits</td><td>4&ndash;5 Years</td><td>&#x2705; Full Support</td></tr>
+        <tr><td><span class="ibdg bpol">Direct Entry</span> 200 Level</td><td>Not required</td><td>A&apos;Level / ND / OND Results</td><td>Varies</td><td>&#x2705; Full Support</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="sec" style="background:var(--sur)">
+  <div class="sintr reveal"><div><div class="slbl">Common Questions</div><h2 class="sttl">Admission <span class="ac">FAQs</span></h2></div><div class="rt">Answers to the questions students ask us most. Still confused? Come see us!</div></div>
+  <div class="acl reveal">
+    <div class="aci"><div class="ach">What is JAMB and when should I register?<div class="acico">+</div></div><div class="acb"><div class="acbi"><p>JAMB (Joint Admissions and Matriculation Board) is Nigeria&apos;s national body that conducts the UTME for entry into tertiary institutions. Registration usually opens between January and March each year. You should come to us as soon as registration opens to avoid long queues and website crashes.</p></div></div></div>
+    <div class="aci"><div class="ach">What score do I need to gain admission?<div class="acico">+</div></div><div class="acb"><div class="acbi"><p>The minimum score varies by institution and course. Federal universities typically require 180+, state universities 160+, and polytechnics 150+. However, competitive courses like Medicine, Law and Engineering require much higher scores (240&ndash;280+). We advise students on what score they need for their specific institution and course choice.</p></div></div></div>
+    <div class="aci"><div class="ach">I missed admission last year. Can I still apply?<div class="acico">+</div></div><div class="acb"><div class="acbi"><p>Absolutely. You can re-sit JAMB as many times as needed. There is no limit to how many times you can write JAMB. We help many candidates who are on their second or third attempt and have helped them successfully gain admission.</p></div></div></div>
+    <div class="aci"><div class="ach">What happens if I don&apos;t get admission after Post-UTME?<div class="acico">+</div></div><div class="acb"><div class="acbi"><p>If you don&apos;t get admission after Post-UTME, you have several options: use the supplementary admission window, apply to another institution, use your current JAMB score for direct applications, or re-sit JAMB the following year. We guide you through all these options.</p></div></div></div>
+    <div class="aci"><div class="ach">How do I know if I have been admitted?<div class="acico">+</div></div><div class="acb"><div class="acbi"><p>You can check your admission status through the JAMB CAPS portal (caps.jamb.gov.ng) or your institution&apos;s own admission portal. We can check this for you, notify you of your status and guide you on what to do next.</p></div></div></div>
+    <div class="aci"><div class="ach">Can I change my course or institution after JAMB?<div class="acico">+</div></div><div class="acb"><div class="acbi"><p>Yes, JAMB allows candidates to change their institution and/or course choice through the CAPS portal &mdash; usually before the deadline for Post-UTME. We handle this process for you to ensure it&apos;s done correctly and before deadlines.</p></div></div></div>
+  </div>
+</section>
+<section class="sec-sm" style="background:var(--bg)">
+  <div class="hlp reveal"><div><div class="hlpt">Need Help with Your Admission?</div><div class="hlps">Come to our office or contact us today &mdash; we&apos;ll guide you every step of the way.</div></div><div style="display:flex;gap:16px;flex-wrap:wrap"><a href="contact.html" class="btn bg">Contact Us</a><a href="services.html" class="btn bo">All Services</a></div></div>
+</section><footer>
+  <div class="ftt">
+    <div>
+      <div class="fbn">Sheyilaw<span>.</span></div>
+      <div class="fbs">Computer Institute</div>
+      <div class="frn">R.N: 9398846</div>
+      <div class="ftg">Your trusted partner for digital services, document processing &amp; computer education since 2020.</div>
+    </div>
+    <div class="fls">
+      <div class="fc"><h5>Pages</h5><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="admission.html">Admission Guide</a></li>
+        <li><a href="training.html">Computer Training</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="fc"><h5>Services</h5><ul>
+        <li><a href="services.html">Printing &amp; Copies</a></li>
+        <li><a href="services.html">Certificate Processing</a></li>
+        <li><a href="services.html">WAEC / NECO Results</a></li>
+        <li><a href="services.html">Project Writing</a></li>
+      </ul></div>
+      <div class="fc"><h5>Reach Us</h5><ul>
+        <li><a href="https://wa.me/2348169381248">WhatsApp Us</a></li>
+        <li><a href="tel:+2348169381248">+234 816 938 1248</a></li>
+        <li><a href="mailto:sheyiowoeye9@gmail.com">sheyiowoeye9@gmail.com</a></li>
+        <li><a href="contact.html">Contact Page</a></li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="fbt">
+    <div class="fcp">&copy; 2026 Sheyilaw Computer Institute. All rights reserved. &nbsp;|&nbsp; R.N: 9398846</div>
+    <div class="fes">Est. 2020</div>
+  </div>
+</footer><script src="script.js"></script></body></html>

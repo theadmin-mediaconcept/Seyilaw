@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="red">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About Us — Sheyilaw Computer Institute</title>
+<link rel="icon" href="seyilaw-logo.png" type="image/png">
+<link rel="stylesheet" href="style.css"/>
+<style>
+.abgrd{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.tlst{display:flex;flex-direction:column}
+.tli{display:flex;gap:20px}
+.tllf{display:flex;flex-direction:column;align-items:center}
+.tly{font-family:Arial;font-size:12px;font-weight:700;color:var(--grn);letter-spacing:1px;min-width:48px;text-align:center;padding-top:4px}
+.tldot{width:10px;height:10px;background:var(--grn);border-radius:50%;margin-top:4px;flex-shrink:0}
+.tlln{flex:1;width:1px;background:var(--bdr);margin:6px 0;min-height:40px}
+.tlcnt{padding-bottom:36px}.tlt{font-family:Arial;font-size:15px;font-weight:700;margin-bottom:4px}
+.tldc{font-size:13px;color:var(--mut);line-height:1.6}
+.abvc{background:var(--card-bg);border:1px solid var(--bdr);padding:48px 40px;position:relative;overflow:hidden;box-shadow:0 2px 20px var(--shadow)}
+.abvc::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--grn),var(--gld))}
+.avbig{font-family:Arial;font-size:80px;font-weight:800;color:var(--grn);line-height:1}
+.avlb{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--mut);margin-bottom:28px}
+.avtx{font-size:14px;color:var(--mut);line-height:1.8;margin-bottom:28px}
+.avst{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px}
+.avsn{font-family:Arial;font-size:28px;font-weight:800;color:var(--txt)}
+.avsl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);margin-top:2px}
+.badge-spin{position:absolute;bottom:-16px;right:-16px;width:130px;height:130px;background:var(--grn);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;animation:spin 12s linear infinite}
+.bsnum{font-family:Arial;font-size:20px;font-weight:800;color:#fff;line-height:1;text-align:center}
+[data-theme="dark"] .bsnum{color:#000}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.wygrd{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.wyc{background:var(--card-bg);border:1px solid var(--bdr);padding:36px 28px;position:relative;transition:border-color .3s,transform .3s;box-shadow:0 2px 12px var(--shadow)}
+.wyc:hover{border-color:rgba(204,0,0,.3);transform:translateY(-4px)}
+[data-theme="dark"] .wyc:hover{border-color:rgba(0,230,118,.3)}
+.wyico{font-size:32px;margin-bottom:16px}.wyt{font-family:Arial;font-size:18px;font-weight:700;margin-bottom:10px}
+.wyd{font-size:13px;color:var(--mut);line-height:1.7}
+.wyn{position:absolute;top:16px;right:20px;font-family:Arial;font-size:44px;font-weight:800;color:rgba(204,0,0,.04)}
+[data-theme="dark"] .wyn{color:rgba(0,230,118,.04)}
+/* FOUNDER */
+.founder-grid{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start}
+/* Founder picture: replace src with your photo path in the HTML below */
+.founder-img{width:100%;aspect-ratio:3/4;object-fit:cover;border:3px solid var(--bdr);border-radius:8px;display:block}
+.founder-img-placeholder{width:100%;aspect-ratio:3/4;background:var(--sur2);border:3px dashed rgba(204,0,0,.3);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--mut)}
+[data-theme="dark"] .founder-img-placeholder{border-color:rgba(0,230,118,.2)}
+.founder-img-placeholder .fp-icon{font-size:52px}
+.founder-img-placeholder .fp-note{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-align:center;line-height:1.6;padding:0 16px}
+.founder-img-placeholder .fp-code{font-size:10px;color:var(--grn);font-family:monospace;margin-top:8px;padding:6px 12px;background:var(--dim);border-radius:4px}
+.founder-badge{display:inline-block;background:var(--dim);border:1px solid rgba(204,0,0,.2);padding:5px 14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--grn);margin-bottom:16px}
+[data-theme="dark"] .founder-badge{border-color:rgba(0,230,118,.2)}
+.founder-name{font-family:Arial;font-size:28px;font-weight:800;margin-bottom:4px;color:var(--txt)}
+.founder-title{font-size:13px;color:var(--grn);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.founder-bio{font-size:14px;color:var(--mut);line-height:1.9;margin-bottom:24px}
+.founder-quote{border-left:3px solid var(--grn);padding:16px 20px;background:var(--dim);margin-top:24px}
+.founder-quote q{font-family:Arial;font-size:16px;font-style:italic;color:var(--txt);line-height:1.7;font-weight:600}
+.founder-quote cite{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--grn);margin-top:10px}
+/* PARTNERS */
+.partners-wrap{display:grid;grid-template-columns:1fr;gap:0}
+.partner-full{background:var(--card-bg);border:1px solid var(--bdr);overflow:hidden;box-shadow:0 2px 20px var(--shadow)}
+.partner-full:hover{border-color:rgba(204,0,0,.3)}
+[data-theme="dark"] .partner-full:hover{border-color:rgba(0,230,118,.25)}
+.pf-head{background:var(--grn);padding:40px 48px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.pf-logo-area{width:80px;height:80px;background:rgba(255,255,255,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0;border:2px solid rgba(255,255,255,.3)}
+.pf-head-info{flex:1}
+.pf-name{font-family:Arial;font-size:24px;font-weight:800;color:#fff;line-height:1;margin-bottom:6px}
+.pf-tagline{font-size:14px;color:rgba(255,255,255,.8);font-style:italic;letter-spacing:.5px}
+.pf-body{padding:40px 48px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.pf-desc{font-size:15px;color:var(--mut);line-height:1.85}
+.pf-meta{display:flex;flex-direction:column;gap:16px}
+.pf-row{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--sur);border:1px solid var(--bdr)}
+.pf-row-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.pf-row-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+.pf-row-val{font-size:14px;font-weight:600}
+.pf-row-val a{color:var(--grn);text-decoration:none}
+.pf-row-val a:hover{text-decoration:underline}
+.pf-services{margin-top:24px;padding-top:24px;border-top:1px solid var(--bdr);grid-column:1/-1}
+.pf-svclbl{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--mut);margin-bottom:16px}
+.pf-svc-tags{display:flex;flex-wrap:wrap;gap:8px}
+.pf-svc-tag{background:var(--dim);border:1px solid rgba(204,0,0,.2);padding:6px 14px;font-size:12px;color:var(--grn);font-weight:600}
+[data-theme="dark"] .pf-svc-tag{border-color:rgba(0,230,118,.2)}
+@media(max-width:900px){.abgrd{grid-template-columns:1fr;gap:56px}.wygrd{grid-template-columns:1fr 1fr}.founder-grid{grid-template-columns:1fr;gap:32px}.pf-body{grid-template-columns:1fr;gap:28px}.pf-head{padding:32px 28px}.pf-body{padding:28px}}
+@media(max-width:560px){.wygrd{grid-template-columns:1fr}}
+</style>
+</head><body>
+<div class="cursor" id="cur"></div><div class="cring" id="ring"></div>
+
+<!-- MOBILE MENU -->
+<div class="mmenu" id="mm">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="admission.html">Admission</a>
+  <a href="training.html">Computer Training</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="ncta">Get Started</a>
+</div>
+
+<!-- MAIN NAV -->
+<nav id="nb">
+  <a href="index.html" class="nlogo">
+    <img src="seyilaw-logo.png" class="nlogo-img" alt="Sheyilaw Logo"/>
+    <div class="nlogo-text">
+      <div class="nlm">Sheyilaw<span>.</span></div>
+      <div class="nls">Computer Institute</div>
+      <div class="nrn">R.N: 9398846</div>
+    </div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="admission.html">Admission</a></li>
+    <li><a href="training.html">Computer Training</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="theme-toggle" id="themeToggle" title="Switch theme">
+      <div class="tt-btn tt-sun active">&#9728;&#65039;</div>
+      <div class="tt-btn tt-moon">&#127769;</div>
+    </div>
+    <a href="contact.html" class="ncta">Get Started</a>
+  </div>
+  <div class="hbg" id="hbg"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="ph"><div class="ph-bg"></div><div class="ph-gr"></div>
+  <div class="ph-c"><div class="ph-badge"><span class="bdot"></span>Our Story</div>
+  <h1 class="ph-ttl">About <span class="ac">Sheyilaw</span></h1>
+  <p class="ph-desc">From a small computer services outlet to a full-service institute &mdash; five years of trust, dedication and community service since 2020.</p>
+  <div class="ph-act"><a href="contact.html" class="btn bg">Contact Us</a><a href="services.html" class="btn bo">Our Services</a></div></div>
+</div>
+
+<section class="sec" style="background:var(--bg)">
+  <div class="sintr reveal"><div><div class="slbl">Our Journey</div><h2 class="sttl">Built on Trust<br><span class="ac">Since 2020</span></h2></div><div class="rt">From day one, Sheyilaw Computer Institute has been committed to making professional digital services accessible to everyone.</div></div>
+  <div class="abgrd">
+    <div class="tlst reveal">
+      <div class="tli"><div class="tllf"><div class="tly">2020</div><div class="tldot"></div><div class="tlln"></div></div><div class="tlcnt"><div class="tlt">Foundation Year</div><div class="tldc">Sheyilaw Computer Institute opened its doors, offering printing, photocopies, and basic computer training to the local community.</div></div></div>
+      <div class="tli"><div class="tllf"><div class="tly">2021</div><div class="tldot"></div><div class="tlln"></div></div><div class="tlcnt"><div class="tlt">Service Expansion</div><div class="tldc">Expanded to include admission guidance, school fees payment, state of origin and testimonial certificate processing.</div></div></div>
+      <div class="tli"><div class="tllf"><div class="tly">2022</div><div class="tldot"></div><div class="tlln"></div></div><div class="tlcnt"><div class="tlt">Academic Support Launch</div><div class="tldc">Introduced professional project writing and research services for students across multiple disciplines.</div></div></div>
+      <div class="tli"><div class="tllf"><div class="tly">2023</div><div class="tldot"></div><div class="tlln"></div></div><div class="tlcnt"><div class="tlt">ICT Training Growth</div><div class="tldc">Expanded computer training programs with structured courses, flexible schedules and certificates.</div></div></div>
+      <div class="tli"><div class="tllf"><div class="tly">2024</div><div class="tldot"></div><div class="tlln"></div></div><div class="tlcnt"><div class="tlt">Community Recognition</div><div class="tldc">Became a trusted name for reliable, fast and affordable digital services. Our client base grew significantly.</div></div></div>
+      <div class="tli"><div class="tllf"><div class="tly">2025+</div><div class="tldot"></div></div><div class="tlcnt"><div class="tlt">Growing Strong</div><div class="tldc">Continuing to expand our services and training programs. The best of Sheyilaw is still ahead.</div></div></div>
+    </div>
+    <div style="position:relative" class="reveal">
+      <div class="abvc">
+        <div class="avbig">5+</div>
+        <div class="avlb">Years of dedicated service</div>
+        <div class="avtx">From a small computer services outlet to a full-service institute, we have grown because our clients trust us to get the job done &mdash; right, fast and affordably.</div>
+        <div class="avst">
+          <div><div class="avsn">10+</div><div class="avsl">Services Offered</div></div>
+          <div><div class="avsn">Fast</div><div class="avsl">Turnaround Time</div></div>
+          <div><div class="avsn">100%</div><div class="avsl">Dedication</div></div>
+          <div><div class="avsn">All</div><div class="avsl">Age Groups Served</div></div>
+        </div>
+        <a href="contact.html" class="btn bo">Get In Touch</a>
+      </div>
+      <div class="badge-spin"><div class="bsnum">EST.<br/>2020</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT THE FOUNDER -->
+<section class="sec" style="background:var(--sur)">
+  <div class="sintr reveal"><div><div class="slbl">The Founder</div><h2 class="sttl">Meet <span class="ac">Owoeye</span><br>Oluwaseyi Samuel</h2></div></div>
+  <div class="founder-grid reveal">
+    <!-- FOUNDER PHOTO: Replace the placeholder below with an <img> tag when you have the photo.
+         Example: <img class="founder-img" src="founder.jpg" alt="Owoeye Oluwaseyi Samuel"/>
+         Remove the .founder-img-placeholder div and use the img tag above. -->
+    <div class="founder-img-placeholder">
+      <img src="seyi.jpg" alt="Seyilaw picture" class="founder-im"/>
+    </div>
+    <div>
+      <div class="founder-badge">Founder &amp; CEO</div>
+      <div class="founder-name">Owoeye Oluwaseyi Samuel</div>
+      <div class="founder-title">Founder, CEO &amp; Lead Instructor</div>
+      <div class="founder-bio">
+        Owoeye Oluwaseyi Samuel is the visionary founder and CEO of Sheyilaw Computer Institute. Driven by a deep passion for technology, education and community empowerment, he established the institute in 2020 with a clear mission: to make professional digital services and computer education accessible to every Nigerian, regardless of background or experience level.<br/><br/>
+        Under his leadership, Sheyilaw has grown from a single-room operation into a full-service digital and educational hub, serving hundreds of students, families and businesses across the community. He personally oversees every service and training session, ensuring each client receives dedicated, high-quality attention.<br/><br/>
+        Oluwaseyi believes that when people have access to the right tools, knowledge and support, they can achieve anything. His hands-on approach and genuine care for clients is what sets Sheyilaw apart.
+      </div>
+      <div class="founder-quote">
+        <q>Access to digital knowledge is not a luxury &mdash; it is a right. My mission is to ensure no one in this community is left behind in the digital age.</q>
+        <cite>&mdash; Owoeye Oluwaseyi Samuel, Founder &amp; CEO</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--bg)">
+  <div class="sintr reveal"><div><div class="slbl">Our Mission</div><h2 class="sttl">Why We Do <span class="ac">What We Do</span></h2></div><div class="rt">We believe everyone deserves access to reliable digital services and quality education.</div></div>
+  <div class="wygrd">
+    <div class="wyc reveal"><div class="wyn">01</div><div class="wyico">⚡</div><div class="wyt">Fast Turnaround</div><div class="wyd">We understand your time is valuable. Most services are completed quickly without compromising on quality or accuracy.</div></div>
+    <div class="wyc reveal"><div class="wyn">02</div><div class="wyico">💰</div><div class="wyt">Affordable for All</div><div class="wyd">Quality services should not cost a fortune. We offer fair, transparent pricing that works for students, families and businesses.</div></div>
+    <div class="wyc reveal"><div class="wyn">03</div><div class="wyico">🎯</div><div class="wyt">Expert Knowledge</div><div class="wyd">Our team is trained and experienced in navigating complex government portals, academic requirements and digital processes.</div></div>
+    <div class="wyc reveal"><div class="wyn">04</div><div class="wyico">🔒</div><div class="wyt">Trusted Reputation</div><div class="wyd">Since 2020, we have built a reputation for honesty, dependability and getting results. We don&apos;t just promise &mdash; we deliver.</div></div>
+    <div class="wyc reveal"><div class="wyn">05</div><div class="wyico">📚</div><div class="wyt">Student-Focused</div><div class="wyd">We particularly care about students. From JAMB to project submission and school fee payments, we walk alongside you.</div></div>
+    <div class="wyc reveal"><div class="wyn">06</div><div class="wyico">🤝</div><div class="wyt">All-in-One Service</div><div class="wyd">From printing to certificates to computer training &mdash; no need to go anywhere else. We handle it all.</div></div>
+  </div>
+</section>
+
+<!-- OUR PARTNERS -->
+<section class="sec" style="background:var(--sur)">
+  <div class="sintr reveal">
+    <div><div class="slbl">Our Partners</div><h2 class="sttl">Our <span class="ac">Partners</span></h2></div>
+    <div class="rt">We collaborate with trusted, creative partners who share our commitment to excellence and community impact.</div>
+  </div>
+  <div class="partners-wrap reveal">
+    <div class="partner-full">
+      <div class="pf-head">
+        <!-- Partner logo: add an <img> tag here when logo is available.
+             Replace the emoji with: <img src="admin-media-logo.png" style="width:60px;height:60px;object-fit:contain;border-radius:8px"/> -->
+        <div class="pf-logo-area"><img src="admin.png" style="width:60px;height:60px;object-fit:contain;border-radius:8px"/></div>
+        <div class="pf-head-info">
+          <div class="pf-name">THE ADMIN MEDIA CONCEPT</div>
+          <div class="pf-tagline">"The World of Communication"</div>
+        </div>
+      </div>
+      <div class="pf-body">
+        <div>
+          <p class="pf-desc">
+            The Admin Media Concept is a dynamic, forward-thinking media and communications company specialising in digital content creation, branding, social media management, graphic design and strategic media outreach. They exist to help individuals, businesses and organisations tell their story powerfully and reach the right audience.<br/><br/>
+            As a valued partner of Sheyilaw Computer Institute, The Admin Media Concept supports our digital presence, content strategy and visual communications — helping us connect better with our community and clients. Their expertise in "the world of communication" perfectly complements our mission of empowering people through technology and education.
+          </p>
+          <div class="pf-services">
+            <div class="pf-svclbl">Their Services</div>
+            <div class="pf-svc-tags">
+              <span class="pf-svc-tag">Website Development</span>
+              <span class="pf-svc-tag">E-Commerce Solutions</span>
+              <span class="pf-svc-tag">Programming &amp; Coding</span>
+              <span class="pf-svc-tag">Website Design</span>
+              <span class="pf-svc-tag">UI / UX Design</span>
+              <span class="pf-svc-tag">Graphics &amp; Logo Design</span>
+              <span class="pf-svc-tag">Banner Design</span>
+              <span class="pf-svc-tag">Digital Content Creation</span>
+              <span class="pf-svc-tag">Branding &amp; Identity</span>
+              <span class="pf-svc-tag">Social Media Management</span>
+              <span class="pf-svc-tag">Media Strategy</span>
+              <span class="pf-svc-tag">Photography &amp; Videography</span>
+            </div>
+          </div>
+        </div>
+        <div class="pf-meta">
+          <div class="pf-row">
+            <div class="pf-row-icon">💬</div>
+            <div><div class="pf-row-lbl">WhatsApp</div><div class="pf-row-val"><a href="https://wa.me/2348035543302">+234 803 554 3302</a></div></div>
+          </div>
+          <div class="pf-row">
+            <div class="pf-row-icon">📞</div>
+            <div><div class="pf-row-lbl">Phone</div><div class="pf-row-val"><a href="tel:+2348035543302">+234 803 554 3302</a></div></div>
+          </div>
+          <div class="pf-row">
+            <div class="pf-row-icon">🌐</div>
+            <div>
+              <div class="pf-row-lbl">Website</div>
+              <div class="pf-row-val"><a href="https://theadmin-media.vercel.app" target="_blank" rel="noopener">theadmin-media.vercel.app</a></div>
+            </div>
+          </div>
+          <div class="pf-row">
+            <div class="pf-row-icon">🏷️</div>
+            <div><div class="pf-row-lbl">Tagline</div><div class="pf-row-val" style="font-style:italic;color:var(--grn)">"The World of Communication"</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm" style="background:var(--bg)">
+  <div style="background:var(--dim);border:1px solid rgba(204,0,0,.2);padding:48px 56px;display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap" class="reveal">
+    <div>
+      <h2 class="sttl" style="font-size:clamp(24px,3vw,40px)">Come Visit Us Today</h2>
+      <p style="color:var(--mut);font-size:15px;margin-top:10px">Shop 2, New Mini Mart Junction &mdash; Open Monday to Saturday, 8am &mdash; 6pm.</p>
+    </div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap"><a href="contact.html" class="btn bg">Contact Us</a><a href="services.html" class="btn bo">View Services</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftt">
+    <div>
+      <div class="fbn">Sheyilaw<span>.</span></div>
+      <div class="fbs">Computer Institute</div>
+      <div class="frn">R.N: 9398846</div>
+      <div class="ftg">Your trusted partner for digital services, document processing &amp; computer education since 2020.</div>
+    </div>
+    <div class="fls">
+      <div class="fc"><h5>Pages</h5><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="admission.html">Admission Guide</a></li>
+        <li><a href="training.html">Computer Training</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="fc"><h5>Services</h5><ul>
+        <li><a href="services.html">Printing &amp; Copies</a></li>
+        <li><a href="services.html">Certificate Processing</a></li>
+        <li><a href="services.html">WAEC / NECO Results</a></li>
+        <li><a href="services.html">Project Writing</a></li>
+      </ul></div>
+      <div class="fc"><h5>Reach Us</h5><ul>
+        <li><a href="https://wa.me/2348169381248">WhatsApp Us</a></li>
+        <li><a href="tel:+2348169381248">+234 816 938 1248</a></li>
+        <li><a href="mailto:sheyiowoeye9@gmail.com">sheyiowoeye9@gmail.com</a></li>
+        <li><a href="contact.html">Contact Page</a></li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="fbt">
+    <div class="fcp">&copy; 2026 Sheyilaw Computer Institute. All rights reserved. &nbsp;|&nbsp; R.N: 9398846</div>
+    <div class="fes">Est. 2020</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body></html>

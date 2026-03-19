@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="red"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact Us — Sheyilaw</title>
+<link rel="icon" type="png" href="seyilaw-logo.png">
+<link rel="stylesheet" href="style.css"/>
+<style>
+.ctgrd{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.ctcards{display:flex;flex-direction:column;gap:16px;margin-top:32px}
+.ctcard{display:flex;gap:16px;background:#fff;border:1px solid var(--bdr);padding:20px 24px;transition:border-color .2s;box-shadow:0 2px 10px rgba(204,0,0,.04);text-decoration:none;color:var(--txt)}
+.ctcard:hover{border-color:rgba(204,0,0,.3)}
+.ctcico{font-size:28px;flex-shrink:0;margin-top:4px}
+.ctclb{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mut)}.ctcvl{font-size:14px;margin-top:4px;font-weight:600}
+.ctform{background:#fff;border:1px solid var(--bdr);padding:48px 40px;position:relative;box-shadow:0 2px 20px rgba(204,0,0,.06)}
+.ctform::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--grn),var(--gld))}
+.ctft{font-family:Arial;font-size:22px;font-weight:700;margin-bottom:6px}.ctfs{font-size:13px;color:var(--mut);margin-bottom:24px}
+.ctfm{display:flex;flex-direction:column;gap:16px}
+.wa-note{background:rgba(37,211,102,.08);border:1px solid rgba(37,211,102,.3);padding:12px 16px;font-size:12px;color:#1a7a3a;margin-bottom:8px;border-radius:4px}
+@media(max-width:900px){.ctgrd{grid-template-columns:1fr;gap:56px}.ctform{padding:36px 24px}}
+</style></head><body>
+<div class="cursor" id="cur"></div><div class="cring" id="ring"></div>
+
+<!-- MOBILE MENU -->
+<div class="mmenu" id="mm">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="admission.html">Admission</a>
+  <a href="training.html">Computer Training</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="ncta">Get Started</a>
+</div>
+
+<!-- MAIN NAV -->
+<nav id="nb">
+  <a href="index.html" class="nlogo">
+    <img src="seyilaw-logo.png" class="nlogo-img" alt="Sheyilaw Logo"/>
+    <div class="nlogo-text">
+      <div class="nlm">Sheyilaw<span>.</span></div>
+      <div class="nls">Computer Institute</div>
+      <div class="nrn">R.N: 9398846</div>
+    </div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="admission.html">Admission</a></li>
+    <li><a href="training.html">Computer Training</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="theme-toggle" id="themeToggle" title="Switch theme">
+      <div class="tt-btn tt-sun active">&#9728;&#65039;</div>
+      <div class="tt-btn tt-moon">&#127769;</div>
+    </div>
+    <a href="contact.html" class="ncta">Get Started</a>
+  </div>
+  <div class="hbg" id="hbg"><span></span><span></span><span></span></div>
+</nav>
+<div class="ph"><div class="ph-bg"></div><div class="ph-gr"></div>
+  <div class="ph-c"><div class="ph-badge"><span class="bdot"></span>Get In Touch</div>
+  <h1 class="ph-ttl">Contact <span class="ac">Us</span></h1>
+  <p class="ph-desc">Have a question, need a service, or want to know more? Reach out &mdash; we respond same day during working hours.</p></div>
+</div>
+<section class="sec" style="background:var(--bg)">
+  <div class="ctgrd">
+    <div class="reveal">
+      <div class="slbl">Reach Out</div>
+      <h2 class="sttl" style="margin-bottom:20px">We&apos;re Here<br><span class="ac">to Help You</span></h2>
+      <p style="color:var(--mut);font-size:15px;line-height:1.8">Whether you need a service, want to enquire about computer training, need admission guidance, or just have a question &mdash; we are always happy to hear from you.</p>
+      <div class="ctcards">
+        <a class="ctcard" href="https://www.google.com/maps/search/Shop+2+New+Mini+Mart+Junction" target="_blank">
+          <div class="ctcico">📍</div><div><div class="ctclb">Location</div><div class="ctcvl">Shop 2, New Mini Mart Junction, Nigeria</div></div>
+        </a>
+        <a class="ctcard" href="tel:+2348169381248">
+          <div class="ctcico">📞</div><div><div class="ctclb">Phone / Call</div><div class="ctcvl">+234 816 938 1248</div></div>
+        </a>
+        <a class="ctcard" href="https://wa.me/2348169381248">
+          <div class="ctcico">💬</div><div><div class="ctclb">WhatsApp</div><div class="ctcvl">+234 816 938 1248</div></div>
+        </a>
+        <a class="ctcard" href="mailto:sheyiowoeye9@gmail.com">
+          <div class="ctcico">✉️</div><div><div class="ctclb">Email</div><div class="ctcvl">sheyiowoeye9@gmail.com</div></div>
+        </a>
+        <div class="ctcard">
+          <div class="ctcico">⏰</div><div><div class="ctclb">Working Hours</div><div class="ctcvl">Monday &ndash; Saturday: 8:00am &ndash; 6:00pm</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ctform reveal">
+      <div class="ctft">Send Us a Message</div>
+      <div class="ctfs">Fill the form below &mdash; it will open WhatsApp with your message pre-filled.</div>
+      <div class="wa-note">📲 Your message will be sent directly to our WhatsApp for fast response.</div>
+      <form class="ctfm" id="cf">
+        <div class="fr">
+          <div class="fg"><label class="fl">First Name</label><input class="fi" type="text" placeholder="e.g. Seun" required/></div>
+          <div class="fg"><label class="fl">Last Name</label><input class="fi" type="text" placeholder="e.g. Adeyemi" required/></div>
+        </div>
+        <div class="fg"><label class="fl">Phone Number</label><input class="fi" type="tel" placeholder="+234 000 000 0000" required/></div>
+        <div class="fg"><label class="fl">Email Address (Optional)</label><input class="fi" type="email" placeholder="sheyiowoeye9@gmail.com"/></div>
+        <div class="fg"><label class="fl">Service Needed</label>
+          <select class="fsl">
+            <option value="">Select a service...</option>
+            <option>Printing / Photocopies</option>
+            <option>Admission Guide</option>
+            <option>School Fees Payment</option>
+            <option>State of Origin Certificate</option>
+            <option>Birth Certificate</option>
+            <option>Testimonial Certificate</option>
+            <option>Project Writing</option>
+            <option>Project Researching</option>
+            <option>Computer Training</option>
+            <option>Tasks Clearance</option>
+            <option>WAEC Original Certificate</option>
+            <option>NECO Original Certificate</option>
+            <option>WAEC Result</option>
+            <option>NECO Result</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fg"><label class="fl">Message</label><textarea class="fta" placeholder="Tell us more about what you need..." required></textarea></div>
+        <button type="submit" class="btn bg" style="align-self:flex-start">Send via WhatsApp 📲</button>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="sec-sm" style="background:var(--sur)">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center" class="reveal">
+    <div style="padding:36px 24px;background:#fff;border:1px solid var(--bdr);box-shadow:0 2px 12px rgba(204,0,0,.04)"><div style="font-size:36px;margin-bottom:12px">💬</div><div style="font-family:Arial;font-size:17px;font-weight:700;margin-bottom:8px">WhatsApp Us</div><div style="font-size:13px;color:var(--mut)">Chat with us directly for fast responses to your enquiries.</div><a href="https://wa.me/2348169381248" class="btn bg" style="display:inline-block;margin-top:20px">Open WhatsApp</a></div>
+    <div style="padding:36px 24px;background:var(--grn);border:1px solid transparent"><div style="font-size:36px;margin-bottom:12px">📱</div><div style="font-family:Arial;font-size:17px;font-weight:700;margin-bottom:8px;color:#fff">Call Us</div><div style="font-size:13px;color:rgba(255,255,255,.8)">Speak directly to our team during working hours.</div><a href="tel:+2348169381248" class="btn" style="display:inline-block;margin-top:20px;background:#fff;color:var(--grn)">Call Now</a></div>
+    <div style="padding:36px 24px;background:#fff;border:1px solid var(--bdr);box-shadow:0 2px 12px rgba(204,0,0,.04)"><div style="font-size:36px;margin-bottom:12px">📧</div><div style="font-family:Arial;font-size:17px;font-weight:700;margin-bottom:8px">Email Us</div><div style="font-size:13px;color:var(--mut)">Send a detailed message and we&apos;ll get back to you quickly.</div><a href="mailto:sheyiowoeye9@gmail.com" class="btn bo" style="display:inline-block;margin-top:20px">Send Email</a></div>
+  </div>
+</section>
+<footer>
+  <div class="ftt">
+    <div>
+      <div class="fbn">Sheyilaw<span>.</span></div>
+      <div class="fbs">Computer Institute</div>
+      <div class="frn">R.N: 9398846</div>
+      <div class="ftg">Your trusted partner for digital services, document processing &amp; computer education since 2020.</div>
+    </div>
+    <div class="fls">
+      <div class="fc"><h5>Pages</h5><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="admission.html">Admission Guide</a></li>
+        <li><a href="training.html">Computer Training</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="fc"><h5>Services</h5><ul>
+        <li><a href="services.html">Printing &amp; Copies</a></li>
+        <li><a href="services.html">Certificate Processing</a></li>
+        <li><a href="services.html">WAEC / NECO Results</a></li>
+        <li><a href="services.html">Project Writing</a></li>
+      </ul></div>
+      <div class="fc"><h5>Reach Us</h5><ul>
+        <li><a href="https://wa.me/2348169381248">WhatsApp Us</a></li>
+        <li><a href="tel:+2348169381248">+234 816 938 1248</a></li>
+        <li><a href="mailto:sheyiowoeye9@gmail.com">sheyiowoeye9@gmail.com</a></li>
+        <li><a href="contact.html">Contact Page</a></li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="fbt">
+    <div class="fcp">&copy; 2026 Sheyilaw Computer Institute. All rights reserved. &nbsp;|&nbsp; R.N: 9398846</div>
+    <div class="fes">Est. 2020</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body></html>

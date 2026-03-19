@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en" data-theme="red"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Computer Training &mdash; Sheyilaw</title><link rel="icon" type="png" href="seyilaw-logo.png"><link rel="stylesheet" href="style.css"/><style>
+.ccg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cc{background:var(--sur);border:1px solid var(--bdr);overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
+.cc:hover{border-color:rgba(0,230,118,.3);transform:translateY(-5px)}
+.cctop{padding:32px 28px;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,var(--sur2),var(--sur));position:relative}
+.ccico{font-size:40px;margin-bottom:16px}
+.ccbdg{display:inline-block;padding:4px 12px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+.bbeg{background:rgba(0,230,118,.12);color:var(--grn)}.bint{background:rgba(255,214,0,.12);color:var(--gld)}.ball{background:rgba(150,150,255,.12);color:#aaf}
+.ccnm{font-family:Arial;font-size:19px;font-weight:700}
+.ccbod{padding:28px;flex:1;display:flex;flex-direction:column}
+.ccds{font-size:13px;color:var(--mut);line-height:1.7;flex:1}
+.ccmeta{display:flex;gap:20px;margin:20px 0 22px;flex-wrap:wrap}
+.ccmi{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mut)}
+.cclb{color:var(--grn);font-weight:600}
+.cctag{border-top:1px solid var(--bdr);padding-top:18px;margin-bottom:22px}
+.ctlb{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
+.cttgs{display:flex;flex-wrap:wrap;gap:6px}
+.ctg{background:var(--sur2);border:1px solid var(--bdr);padding:4px 10px;font-size:11px;color:var(--mut)}
+.pkgr{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.pkc{background:var(--sur2);border:1px solid var(--bdr);padding:28px 24px;text-align:center}
+.pkico{font-size:32px;margin-bottom:12px}.pkt{font-family:Arial;font-size:15px;font-weight:700;margin-bottom:8px}.pkd{font-size:12px;color:var(--mut);line-height:1.6}
+.apw{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:flex-start}
+.apinfo{display:flex;flex-direction:column;gap:16px}
+.apic{display:flex;gap:16px;background:var(--sur2);border:1px solid var(--bdr);padding:18px 20px}
+.apiico{font-size:22px;flex-shrink:0}.apilb{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mut)}.apivl{font-size:14px;margin-top:3px}
+.apfw{background:var(--sur);border:1px solid var(--bdr);padding:48px 40px;position:relative}
+.apfw::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--grn),var(--gld))}
+.apft{font-family:Arial;font-size:22px;font-weight:700;margin-bottom:6px}
+.apfs{font-size:13px;color:var(--mut);margin-bottom:24px}
+.apform{display:flex;flex-direction:column;gap:16px}
+@media(max-width:1024px){.ccg{grid-template-columns:1fr 1fr}.pkgr{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){.apw{grid-template-columns:1fr}}
+@media(max-width:640px){.ccg{grid-template-columns:1fr}.pkgr{grid-template-columns:1fr 1fr}.apfw{padding:32px 24px}}
+@media(max-width:400px){.pkgr{grid-template-columns:1fr}}
+</style></head><body><div class="cursor" id="cur"></div><div class="cring" id="ring"></div>
+
+<!-- MOBILE MENU -->
+<div class="mmenu" id="mm">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="admission.html">Admission</a>
+  <a href="training.html">Computer Training</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="ncta">Get Started</a>
+</div>
+
+<!-- MAIN NAV -->
+<nav id="nb">
+  <a href="index.html" class="nlogo">
+    <img src="seyilaw-logo.png" class="nlogo-img" alt="Sheyilaw Logo"/>
+    <div class="nlogo-text">
+      <div class="nlm">Sheyilaw<span>.</span></div>
+      <div class="nls">Computer Institute</div>
+      <div class="nrn">R.N: 9398846</div>
+    </div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="admission.html">Admission</a></li>
+    <li><a href="training.html">Computer Training</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="theme-toggle" id="themeToggle" title="Switch theme">
+      <div class="tt-btn tt-sun active">&#9728;&#65039;</div>
+      <div class="tt-btn tt-moon">&#127769;</div>
+    </div>
+    <a href="contact.html" class="ncta">Get Started</a>
+  </div>
+  <div class="hbg" id="hbg"><span></span><span></span><span></span></div>
+</nav>
+<!-- APPLY MODAL -->
+<div class="ov" id="ov"></div>
+<div class="modal" id="mod">
+  <button class="mclose cm">&times;</button>
+  <div class="mttl">Apply for Training</div>
+  <div class="msub">Fill out the form and we&apos;ll contact you within 24 hours to confirm your enrolment.</div>
+  <div class="sbox" id="sb"><div class="sbi">&#x1F389;</div><div><div class="sbt">Application Submitted!</div><div class="sbs">We&apos;ll contact you within 24 hours to confirm your enrolment.</div></div></div>
+  <form class="mform" id="af">
+    <div class="fr">
+      <div class="fg"><label class="fl">First Name</label><input class="fi" type="text" placeholder="e.g. Seun" required/></div>
+      <div class="fg"><label class="fl">Last Name</label><input class="fi" type="text" placeholder="e.g. Adeyemi" required/></div>
+    </div>
+    <div class="fg"><label class="fl">Phone Number</label><input class="fi" type="tel" placeholder="+234 816 938 1248" required/></div>
+    <div class="fg"><label class="fl">Course</label>
+      <select class="fsl" id="mCourse" required>
+        <option value="">Select a course...</option>
+        <option>Computer Basics &amp; Literacy</option>
+        <option>Microsoft Office Suite</option>
+        <option>Internet &amp; Email Essentials</option>
+        <option>Typing &amp; Data Entry</option>
+        <option>Graphic Design Basics</option>
+        <option>Full ICT Package (All Courses)</option>
+      </select>
+    </div>
+    <div class="fg"><label class="fl">Preferred Schedule</label>
+      <select class="fsl" required>
+        <option value="">Select schedule...</option>
+        <option>Morning (8am &ndash; 10am)</option>
+        <option>Afternoon (12pm &ndash; 2pm)</option>
+        <option>Evening (4pm &ndash; 6pm)</option>
+        <option>Flexible / Any Time</option>
+      </select>
+    </div>
+    <div class="fg"><label class="fl">Message (Optional)</label><textarea class="fta" style="min-height:90px" placeholder="Any questions or special requirements?"></textarea></div>
+    <button type="submit" class="btn bg" style="align-self:flex-start;margin-top:8px">Send via WhatsApp 📲</button>
+  </form>
+</div>
+<div class="ph"><div class="ph-bg"></div><div class="ph-gr"></div>
+  <div class="ph-c"><div class="ph-badge"><span class="bdot"></span>ICT Education</div>
+  <h1 class="ph-ttl">Computer <span class="ac">Training</span></h1>
+  <p class="ph-desc">Hands-on computer training programs designed for beginners and intermediate learners. Gain real digital skills that open real opportunities.</p>
+  <div class="ph-act"><a href="#courses" class="btn bg">View Courses</a><button class="btn bgo om">Apply Now &#x1F393;</button></div></div>
+</div>
+<section class="sec-sm" style="background:var(--sur)">
+  <div class="pkgr">
+    <div class="pkc reveal"><div class="pkico">&#x1F3AF;</div><div class="pkt">Hands-On Learning</div><div class="pkd">Practice on real computers with one-on-one instructor attention.</div></div>
+    <div class="pkc reveal"><div class="pkico">&#x1F4B0;</div><div class="pkt">Affordable Fees</div><div class="pkd">Fair pricing with flexible payment plans for all students.</div></div>
+    <div class="pkc reveal"><div class="pkico">&#x1F4DC;</div><div class="pkt">Certificate Awarded</div><div class="pkd">Receive a completion certificate upon finishing your course.</div></div>
+    <div class="pkc reveal"><div class="pkico">&#x1F550;</div><div class="pkt">Flexible Schedule</div><div class="pkd">Morning, afternoon or evening sessions to fit your lifestyle.</div></div>
+  </div>
+</section>
+<section id="courses" class="sec" style="background:var(--bg);scroll-margin-top:80px">
+  <div class="sintr reveal"><div><div class="slbl">Our Programs</div><h2 class="sttl">Available <span class="ac">Courses</span></h2></div><button class="btn bg om">Apply Now</button></div>
+  <div class="ccg">
+    <div class="cc reveal"><div class="cctop"><div class="ccico">&#x1F5A5;&#xFE0F;</div><div class="ccbdg bbeg">Beginner</div><div class="ccnm">Computer Basics &amp; Literacy</div></div><div class="ccbod"><div class="ccds">Perfect for first-time computer users. Learn to turn on, navigate and use a computer confidently. Covers everything from mouse usage to file management.</div><div class="ccmeta"><div class="ccmi"><span class="cclb">Duration:</span> 4 Weeks</div><div class="ccmi"><span class="cclb">Level:</span> Beginner</div></div><div class="cctag"><div class="ctlb">Topics Covered</div><div class="cttgs"><span class="ctg">Computer Parts</span><span class="ctg">Windows OS</span><span class="ctg">File Management</span><span class="ctg">Keyboard &amp; Mouse</span><span class="ctg">Basic Settings</span></div></div><button class="btn bg om" data-course="Computer Basics &amp; Literacy" style="width:100%">Apply for This Course</button></div></div>
+    <div class="cc reveal"><div class="cctop"><div class="ccico">&#x1F4CA;</div><div class="ccbdg bbeg">Beginner &ndash; Intermediate</div><div class="ccnm">Desktop Publishing</div></div><div class="ccbod"><div class="ccds">Master the most used office tools in the world. Create professional documents, spreadsheets and presentations used in schools, businesses and government offices.</div><div class="ccmeta"><div class="ccmi"><span class="cclb">Duration:</span> 6 Weeks</div><div class="ccmi"><span class="cclb">Level:</span> Beginner+</div></div><div class="cctag"><div class="ctlb">Topics Covered</div><div class="cttgs"><span class="ctg">MS Word</span><span class="ctg">MS Excel</span><span class="ctg">MS PowerPoint</span><span class="ctg">Formatting</span><span class="ctg">Formulas</span><span class="ctg">Charts</span></div></div><button class="btn bg om" data-course="Microsoft Office Suite" style="width:100%">Apply for This Course</button></div></div>
+    <div class="cc reveal"><div class="cctop"><div class="ccico">&#x1F310;</div><div class="ccbdg bbeg">Beginner</div><div class="ccnm">Internet &amp; Email Essentials</div></div><div class="ccbod"><div class="ccds">Get connected! Learn how to browse the internet safely, set up and manage email accounts, use Google services and stay safe online.</div><div class="ccmeta"><div class="ccmi"><span class="cclb">Duration:</span> 2 Weeks</div><div class="ccmi"><span class="cclb">Level:</span> Beginner</div></div><div class="cctag"><div class="ctlb">Topics Covered</div><div class="cttgs"><span class="ctg">Web Browsing</span><span class="ctg">Gmail Setup</span><span class="ctg">Google Drive</span><span class="ctg">Online Safety</span><span class="ctg">Downloads</span></div></div><button class="btn bg om" data-course="Internet &amp; Email Essentials" style="width:100%">Apply for This Course</button></div></div>
+    <div class="cc reveal"><div class="cctop"><div class="ccico">&#x2328;&#xFE0F;</div><div class="ccbdg ball">All Levels</div><div class="ccnm">Typing &amp; Data Entry</div></div><div class="ccbod"><div class="ccds">Improve your typing speed and accuracy for work, school or business. Learn proper finger placement, touch typing techniques and professional data entry skills.</div><div class="ccmeta"><div class="ccmi"><span class="cclb">Duration:</span> 3 Weeks</div><div class="ccmi"><span class="cclb">Level:</span> All Levels</div></div><div class="cctag"><div class="ctlb">Topics Covered</div><div class="cttgs"><span class="ctg">Touch Typing</span><span class="ctg">Speed Building</span><span class="ctg">Accuracy</span><span class="ctg">Data Entry</span><span class="ctg">Numeric Keypad</span></div></div><button class="btn bg om" data-course="Typing &amp; Data Entry" style="width:100%">Apply for This Course</button></div></div>
+    <div class="cc reveal"><div class="cctop"><div class="ccico">&#x1F3A8;</div><div class="ccbdg bint">Intermediate</div><div class="ccnm">Graphic Design Basics</div></div><div class="ccbod"><div class="ccds">Introduction to digital design for beginners. Create flyers, posters, social media graphics and simple branding materials using beginner-friendly design tools.</div><div class="ccmeta"><div class="ccmi"><span class="cclb">Duration:</span> 6 Weeks</div><div class="ccmi"><span class="cclb">Level:</span> Intermediate</div></div><div class="cctag"><div class="ctlb">Topics Covered</div><div class="cttgs"><span class="ctg">Design Principles</span><span class="ctg">Canva</span><span class="ctg">Flyer Design</span><span class="ctg">Social Graphics</span><span class="ctg">Color Theory</span></div></div><button class="btn bg om" data-course="Graphic Design Basics" style="width:100%">Apply for This Course</button></div></div>
+    <div class="cc reveal" style="border-color:rgba(255,214,0,.25)"><div class="cctop" style="background:linear-gradient(135deg,rgba(255,214,0,.08),var(--sur2))"><div class="ccico">&#x1F3C6;</div><div class="ccbdg" style="background:rgba(255,214,0,.12);color:var(--gld)">Best Value</div><div class="ccnm">Full ICT Package</div></div><div class="ccbod"><div class="ccds">The complete computer training experience. All five courses bundled together at a special discounted rate. Everything from computer basics to design skills &mdash; one enrolment, complete knowledge.</div><div class="ccmeta"><div class="ccmi"><span class="cclb">Duration:</span> 16 Weeks</div><div class="ccmi"><span class="cclb">Level:</span> All Levels</div></div><div class="cctag"><div class="ctlb">Includes All Courses</div><div class="cttgs"><span class="ctg">Computer Basics</span><span class="ctg">MS Office</span><span class="ctg">Internet</span><span class="ctg">Typing</span><span class="ctg">Design</span></div></div><button class="btn bgo om" data-course="Full ICT Package (All Courses)" style="width:100%">Apply &mdash; Best Value</button></div></div>
+  </div>
+</section>
+<section id="apply" class="sec" style="background:var(--sur);scroll-margin-top:80px">
+  <div class="sintr reveal"><div><div class="slbl">Enrol Today</div><h2 class="sttl">Apply for <span class="ac">Computer Training</span></h2></div><div class="rt">Fill out the form or click the button on any course above. We&apos;ll confirm your spot within 24 hours.</div></div>
+  <div class="apw">
+    <div class="reveal">
+      <p style="color:var(--mut);font-size:15px;line-height:1.8;margin-bottom:36px">Ready to start your computer journey? Applications are open all year round. Choose your preferred course and schedule, and we&apos;ll get you started.</p>
+      <div class="apinfo">
+        <div class="apic"><div class="apiico">&#x1F4C5;</div><div><div class="apilb">Start Date</div><div class="apivl">New batches begin monthly &mdash; ask us for the next available date</div></div></div>
+        <div class="apic"><div class="apiico">&#x1F550;</div><div><div class="apilb">Class Hours</div><div class="apivl">Morning 8am&ndash;10am &middot; Afternoon 12pm&ndash;2pm &middot; Evening 4pm&ndash;6pm</div></div></div>
+        <div class="apic"><div class="apiico">&#x1F4B0;</div><div><div class="apilb">Payment</div><div class="apivl">Flexible payment options available &mdash; ask us about installment plans</div></div></div>
+        <div class="apic"><div class="apiico">&#x1F4DC;</div><div><div class="apilb">Certificate</div><div class="apivl">Official Sheyilaw Computer Institute certificate upon completion</div></div></div>
+      </div>
+      <button class="btn bg om" style="margin-top:36px">Apply Now &mdash; It&apos;s Free to Apply</button>
+    </div>
+    <div class="apfw reveal">
+      <div class="apft">Quick Application Form</div>
+      <div class="apfs">Or use the button below to apply through our full application modal.</div>
+      <form class="apform" id="af2">
+        <div class="fr">
+          <div class="fg"><label class="fl">First Name</label><input class="fi" type="text" placeholder="e.g. Seun" required/></div>
+          <div class="fg"><label class="fl">Last Name</label><input class="fi" type="text" placeholder="e.g. Adeyemi" required/></div>
+        </div>
+        <div class="fg"><label class="fl">Phone Number</label><input class="fi" type="tel" placeholder="+234 816 938 1248" required/></div>
+        <div class="fg"><label class="fl">Choose Course</label>
+          <select class="fsl" required><option value="">Select a course...</option><option>Computer Basics &amp; Literacy</option><option>Microsoft Office Suite</option><option>Internet &amp; Email Essentials</option><option>Typing &amp; Data Entry</option><option>Graphic Design Basics</option><option>Full ICT Package (All Courses)</option></select>
+        </div>
+        <div class="fg"><label class="fl">Preferred Time</label>
+          <select class="fsl" required><option value="">Select schedule...</option><option>Morning (8am &ndash; 10am)</option><option>Afternoon (12pm &ndash; 2pm)</option><option>Evening (4pm &ndash; 6pm)</option><option>Flexible</option></select>
+        </div>
+        <button type="submit" class="btn bg" style="align-self:flex-start;margin-top:8px">Send via WhatsApp 📲</button>
+      </form>
+    </div>
+  </div>
+</section><footer>
+  <div class="ftt">
+    <div>
+      <div class="fbn">Sheyilaw<span>.</span></div>
+      <div class="fbs">Computer Institute</div>
+      <div class="frn">R.N: 9398846</div>
+      <div class="ftg">Your trusted partner for digital services, document processing &amp; computer education since 2020.</div>
+    </div>
+    <div class="fls">
+      <div class="fc"><h5>Pages</h5><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="admission.html">Admission Guide</a></li>
+        <li><a href="training.html">Computer Training</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="fc"><h5>Services</h5><ul>
+        <li><a href="services.html">Printing &amp; Copies</a></li>
+        <li><a href="services.html">Certificate Processing</a></li>
+        <li><a href="services.html">WAEC / NECO Results</a></li>
+        <li><a href="services.html">Project Writing</a></li>
+      </ul></div>
+      <div class="fc"><h5>Reach Us</h5><ul>
+        <li><a href="https://wa.me/2348169381248">WhatsApp Us</a></li>
+        <li><a href="tel:+2348169381248">+234 816 938 1248</a></li>
+        <li><a href="mailto:sheyiowoeye9@gmail.com">sheyiowoeye9@gmail.com</a></li>
+        <li><a href="contact.html">Contact Page</a></li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="fbt">
+    <div class="fcp">&copy; 2026 Sheyilaw Computer Institute. All rights reserved. &nbsp;|&nbsp; R.N: 9398846</div>
+    <div class="fes">Est. 2020</div>
+  </div>
+</footer><script src="script.js"></script></body></html>
